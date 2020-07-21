@@ -2282,6 +2282,29 @@ PrefabInstance:
       propertyPath: m_Speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2805949560266508494, guid: e9a4bb26a42e4ed4eb9abb6f58a0a9f5,
+        type: 3}
+      propertyPath: robolist.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805949560266508494, guid: e9a4bb26a42e4ed4eb9abb6f58a0a9f5,
+        type: 3}
+      propertyPath: robolist.Array.data[0]
+      value: 
+      objectReference: {fileID: 7061554253846966871, guid: 306d7b0f0b959c3488730714c5d6cab2,
+        type: 3}
+    - target: {fileID: 2805949560266508494, guid: e9a4bb26a42e4ed4eb9abb6f58a0a9f5,
+        type: 3}
+      propertyPath: robolist.Array.data[1]
+      value: 
+      objectReference: {fileID: 3712360158771973503, guid: 5b155114de43cbe48997c047082842e1,
+        type: 3}
+    - target: {fileID: 2805949560266508494, guid: e9a4bb26a42e4ed4eb9abb6f58a0a9f5,
+        type: 3}
+      propertyPath: robolist.Array.data[2]
+      value: 
+      objectReference: {fileID: 3712360158771973503, guid: b47703f373e460c4fb6567ccec7c187d,
+        type: 3}
     - target: {fileID: 2805949560266508495, guid: e9a4bb26a42e4ed4eb9abb6f58a0a9f5,
         type: 3}
       propertyPath: m_Name

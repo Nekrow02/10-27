@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
+using UnityEngine.UIElements;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class Enemy : MonoBehaviourPunCallbacks, IPunObservable
@@ -13,7 +13,10 @@ public class Enemy : MonoBehaviourPunCallbacks, IPunObservable
     private Transform tr;
     Transform target;
     float distance, distance0, distance1, distance2, distance3;
-    GameObject[] robolist;
+    //GameObject[] robolist;
+    GameObject robo1, robo2, robo3;
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -28,11 +31,11 @@ public class Enemy : MonoBehaviourPunCallbacks, IPunObservable
 
         //가까운놈으로 타겟 초기화
         if (distance == distance0)
-            target = robolist[0].transform;
+            target = robo1.transform;
         else if (distance == distance1)
-            target = robolist[1].transform;
+            target = robo2.transform;
         else if (distance == distance2)
-            target = robolist[2].transform;
+            target = robo3.transform;
         else
             target = null;
 
@@ -44,16 +47,20 @@ public class Enemy : MonoBehaviourPunCallbacks, IPunObservable
 
     void Update()
     {
-        robolist = GameObject.FindGameObjectsWithTag("ROBO");
-
-        if (GameObject.FindGameObjectWithTag("ROBO"))
+        //robolist = GameObject.FindGameObjectsWithTag("ROBO");
+        
+        if(GameObject.Find("Player(Clone)") && GameObject.Find("Robo(Clone)") && GameObject.Find("Robo_J(Clone)"))
         {
-            distance0 = Vector3.Distance(robolist[0].transform.position, transform.position);
-            distance1 = Vector3.Distance(robolist[1].transform.position, transform.position);
-            distance2 = Vector3.Distance(robolist[2].transform.position, transform.position);
-            //distance3 = Vector3.Distance(robolist[3].transform.position, transform.position);
+            robo1 = GameObject.Find("Player(Clone)");
+            robo2 = GameObject.Find("Robo(Clone)");
+            robo3 = GameObject.Find("Robo_J(Clone)");
+
         }
 
+
+        distance0 = Vector3.Distance(robo1.transform.position, transform.position);
+        distance1 = Vector3.Distance(robo2.transform.position, transform.position);
+        distance2 = Vector3.Distance(robo3.transform.position, transform.position);
 
         distance = Mathf.Min(distance0, distance1, distance2);//, distance3);
 
