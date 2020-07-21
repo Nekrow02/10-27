@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 12004, y: 14042}
   vertical: 1
-  controlID: 80
+  controlID: 101
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 221}
   m_MaxSize: {x: 12004, y: 4021}
   vertical: 0
-  controlID: 81
+  controlID: 102
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -310,9 +310,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 843e0000
+      m_SelectedIDs: 06300000
       m_LastClickedID: 0
-      m_ExpandedIDs: 18e6ffff6ceaffff6afbffff
+      m_ExpandedIDs: 10fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -413,20 +413,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Script
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Script
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\GitHub\10-27
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 174}
+    scrollPos: {x: 0, y: 158}
     m_SelectedIDs: de3a0000
     m_LastClickedID: 15070
-    m_ExpandedIDs: 00000000ba3a0000bc3a0000be3a0000c03a0000c23a000000ca9a3b
+    m_ExpandedIDs: 00000000b63a0000b83a0000ba3a0000bc3a0000be3a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -454,7 +454,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ba3a0000bc3a0000be3a0000c03a0000c23a0000
+    m_ExpandedIDs: 00000000b63a0000b83a0000ba3a0000bc3a0000be3a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

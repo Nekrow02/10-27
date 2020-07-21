@@ -8,7 +8,7 @@ public class Buff : MonoBehaviour
     GameObject target;
     float distance, distance0, distance1, distance2, distance3;
     GameObject[] robolist;
-    bool buff_on = false;
+    bool buff_on, buff_on_m = false;
 
 
     void Start()
@@ -34,12 +34,17 @@ public class Buff : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.C))
         {
+            if(buff_on_m == false)
+            {
+
             FindMe();
 
             target.GetComponent<MoveCtrl>().speed += 10;
-            buff_on = true;
+            buff_on_m = true;
 
-            Invoke("ResetBuff", 5f);
+            Invoke("ResetBuff_m", 5f);
+            }
+
         }
 
 
@@ -47,18 +52,19 @@ public class Buff : MonoBehaviour
         //Debug.Log(robolist[1].name + "1번째 로봇");
         if (Input.GetKeyDown(KeyCode.V))
         {
-            Min();
 
             if (buff_on == false)
             {
+                Min();
+
                 FindTarget();
+
+
+                target.GetComponent<MoveCtrl>().speed += 10;
+                buff_on = true;
+
+                Invoke("ResetBuff", 5f);
             }
-
-
-            target.GetComponent<MoveCtrl>().speed += 10;
-            buff_on = true;
-
-            Invoke("ResetBuff", 5f);
         }
     }
 
@@ -67,7 +73,11 @@ public class Buff : MonoBehaviour
         target.GetComponent<MoveCtrl>().speed -= 10;
         buff_on = false;
     }
-
+    void ResetBuff_m()
+    {
+        target.GetComponent<MoveCtrl>().speed -= 10;
+        buff_on_m = false;
+    }
     void Min()
     {
         if (distance == distance0)
